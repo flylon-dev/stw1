@@ -1,0 +1,58 @@
+# 寫法說明
+# 尾端有加斜線：dist/ 只忽略名為 dist 的資料夾及其內部的所有子檔案排除
+# 尾端沒有斜線：dist  不論是檔案還是資料夾，只要名字叫 dist 就通通忽略
+# 排除根目錄下的整個大型套件資料夾 (例如 Node.js 專案); 
+# .env Python 的虛擬環境名稱通常預設就叫 .venv（前面帶一個點），這代表它在系統中是一個隱藏資料夾。
+# 寫 .venv：Copilot 會去尋找名字剛好叫做 .venv 的隱藏資料夾或檔案。
+# 寫 venv：Copilot 只會去尋找沒有點的 venv 資料夾。
+# .env.  
+# .env（結尾沒有點）：只會精準忽略名字剛好完全叫做 .env 的單一檔案。
+# .env.（結尾有一個點）： 這是利用萬用字元（fnmatch）的概念。在結尾加上點，代表要忽略所有以 .env. 開頭，後面接著其他後綴的檔案。
+# 例如： 它會自動忽略 .env.development、.env.production、.env.local 等常見的前後端環境部署設定檔
+# *.py <- 是指從根目錄下的任何檔案與所有目錄下裡有 .py的檔案都忽略嗎?
+# 只要檔案的副檔名是 .py，GitHub Copilot 就會徹底忽略、完全不讀取它們
+#
+node_modules
+node_modules/
+bin/
+obj/
+dist/
+build/
+
+# 排除 Python 的虛擬環境資料夾
+.venv
+venv
+env
+**/.env.*
+
+venv/
+.venv/
+
+
+# 排除前端打包產出的編譯資料夾
+dist
+build
+
+# 排除特定後綴的暫存或大型二進制檔案 (在專案中任何位置)
+.log
+.mp4
+.bin
+
+# 排除所有的環境變數敏感檔案 (在專案中任何位置)
+.env
+.env.
+
+# 排除特定的本地測試或資料資料夾
+data
+testsfixtures
+
+
+# 忽略日誌檔與特定暫存
+*.log
+*.tmp
+*.txt
+
+CLAUDE.md
+*.py
+*.html
+*.js
