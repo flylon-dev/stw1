@@ -35,8 +35,10 @@ def decrypt_binary_to_text(input_file_path, output_file_path, key=42):
 
 # 1. 加密：將 original.txt 加密成 encrypted.bin (金鑰設為 abcdefgals;asjdlfj)
 #encrypt_text_to_binary('/content/stock_word03.py', '/content/stock_word03.txt', abcdefgals;asjdlfj)
+#encrypt_text_to_binary('/content/stock_word03_moni.py', '/content/stock_word03_moni.txt', abcdefgals;asjdlfj)
 # 2. 解密：將 encrypted.bin 還原成 decrypted.txt
-#decrypt_binary_to_text('/content/stock_word03.txt', '/content/stock_word03.py', abcdefgals;asjdlfj)
+# decrypt_binary_to_text('/content/stock_word03.txt', '/content/stock_word03.py', abcdefgals;asjdlfj)
+# decrypt_binary_to_text('/content/stock_word03_moni.txt', '/content/stock_word03_moni.py', abcdefgals;asjdlfj)
 
 
 # 1. 加密：將 original.txt 加密成 encrypted.bin (金鑰設為 abcdefgals;asjdlfj)
